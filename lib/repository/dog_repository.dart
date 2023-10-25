@@ -8,9 +8,9 @@ import 'package:http/http.dart' as http;
 class Repository {
   static const String baseUrl = 'https://dog.ceo/api/breeds';
 
-  Future<Dog> getRandomDog() async {
+  Future<Dog> getRandomDog(String num) async {
     try {
-      var res = await http.get(Uri.parse('$baseUrl/image/random'));
+      var res = await http.get(Uri.parse('$baseUrl/image/random/$num'));
 
       return Dog.fromUrl(res.body);
     } catch (e) {

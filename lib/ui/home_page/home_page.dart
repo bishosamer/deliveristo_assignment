@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
         builder: (context, state) {
           return Center(
             child: ElevatedButton(
-              onPressed: () => context.read<Repository>().getAllBreeds(),
+              onPressed: () => context.read<Repository>().getRandomDog("1"),
               child: Text("a7a"),
             ),
           );

@@ -40,6 +40,7 @@ class BreedSelector extends StatelessWidget {
           return Wrap(
             children: [
               DropdownButton(
+                  hint: const Text('choose breed'),
                   items: breeds,
                   value: state.selectedBreed,
                   onChanged: (val) {

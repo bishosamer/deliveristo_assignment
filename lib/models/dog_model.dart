@@ -1,5 +1,3 @@
-import 'package:deliveristo_assignment/models/breed_model.dart';
-
 class Dog {
   final String imageUrl;
   final String breed;

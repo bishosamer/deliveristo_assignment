@@ -5,12 +5,29 @@ abstract class HomepageState {}
 
 class HomepageInitial extends HomepageState {}
 
-class BreedsLoading extends HomepageState {}
+class Loading extends HomepageState {
+  final List<Breed>? breeds;
+  final Breed? selectedBreed;
+  final String? selectedSubBreed;
 
-class DogsLoading extends HomepageState {}
+  Loading({this.breeds, this.selectedBreed, this.selectedSubBreed});
+}
 
-class DogsLoaded extends HomepageState {}
+class Loaded extends HomepageState {
+  final List<Dog>? dogs;
+  final List<Breed> breeds;
+  final Breed? selectedBreed;
+  final String? selectedSubBreed;
 
-class BreedsLoaded extends HomepageState {}
+  Loaded(
+      {required this.breeds,
+      this.selectedBreed,
+      this.selectedSubBreed,
+      this.dogs});
+}
 
-class HomePageError extends HomepageState {}
+class HomePageError extends HomepageState {
+  final String error;
+
+  HomePageError({required this.error});
+}

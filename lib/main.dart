@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
       home: RepositoryProvider(
           create: (context) => repo,
           child: BlocProvider(
-            create: (context) => HomepageBloc(),
+            create: (context) => HomepageBloc(repo),
             child: const HomePage(),
           )),
     );
